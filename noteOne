@@ -1,0 +1,212 @@
+CSS - 
+kept using <tags> color, center,
+Got problem with layout > we have to use tables , very wordy. easy to mess up, difficult to debug.
+----------
+
+add "style" in <body> like <body style="background-color:blue;">
+
+How we know?
+google>
+change background color css mdn
+
+colorhunt.co > check color palat > copy the hex value #EAF6F6 > <body style="background-color:#EAF6F6;">  plug in pigment will highlight the color.
+
+google > css color > table keywords + hex value codes
+
+Will use chrome extension called, "Pesticide" > Allow access to file URLs enabled.
+
+
+The old way to write
+
+<style>
+
+Add the element e.g > 
+
+body { background-color:#EAF6F6; }
+hr   { background-color:white;}   Note: sometime it may/not change > That is bacause of the browser has a DEFAULT settings for CSS. Google > "browser default css"
+
+</style>
+
+***Every elements of CSS in the broswer are in shape form of boxes.
+
+So, it has it's 
+
+background-color: white;
+border-style: none
+height:2px
+width:100px;
+
+
+!!! Evertime I want to apply the change the style of the page, I need to copy and pastse the style tag in each pages!!! Not an ideal!
+
+we want a single location so that it can apply to ALL the pages! > External CSS!
+
+
+selector {property:value;}
+
+selector is 'The Who' , who style
+property is 'The What'
+value is 'The How'
+
+*****Class selector*****
+
+img , say I have 2 images. I can add a class!
+
+img class = "imgOne" > in the style.css > .imgOne  (put the dot .)
+
+******ID selector*****
+
+<h1 id="heading">I love Bacon</h1> in the style.css > #heading (put #)
+
+
+****When should we use ID and when should use ID?*****
+
+id for only unquie item. ONLY Single on particular page.
+class can be a group element , that has similar styles.
+
+*****Sudo class******
+
+every element has a stage, and we can tell the css to change. Like when user hover the mouse over the element.
+
+
+img:hover
+  {
+    background-color: gold;
+  }
+
+------------Create More cooler site ---------
+
+CSS - My site > indexhtml
+link > stylesheet > CSS/styles.css
+
+CSS - My site > CSS > styles.css
+
+
+Ready to roll >
+
+Favicons > Google > https://favicon.io/ > for converter 
+or draw your own > https://www.favicon.cc/
+
+
+
+CSS Display property-
+in the exercise - cloud pic only take a space of the picture itself like a box.
+
+
+***Block*** - element will take up "the whole" width of the html page.
+
+Most common block elemets - 
+
+Paragraphs <p>
+Headers <h1>
+Divisions <div>
+Lists and list items (<ol>, <ul>, and <li>)
+Forms <form>
+
+-Use span to change something NOT to taking space "in line" from these blocks. <span></span>
+
+
+***Inline*** (They do not block the other elements)
+
+Spans<span>
+Images <img>
+Anchors<a>
+
+So of course > inline cann't change the width.
+
+
+example - 
+
+p is block > but we can add the display attribute with value 'inline'
+
+p {
+  background-color:red;
+  width:100px;
+  display:inline;
+}
+
+span is inline > no block so even we put the width doesn't change anything.
+
+span {
+  background-color:blue;
+  width:100px;
+}
+
+***Inline-block***
+
+Can do both (to have a witch and in the same line)
+
+
+***None**** (Remove the element)
+THis is you can Hide the element as if "They dont exist". Like Quizes.
+
+display:inline;
+
+visibility:hidden; (This is hidden but preserve a space of this element).
+
+
+------------------------------------------------
+
+CSS positioning----
+
+#1.
+Remember HTML always have a pre-conf how to display, even before the CSS comes in.
+
+Block will take the whole width but on height ONLY takes according to the content.
+
+Span on the other hand only takes the level of the content.
+
+
+#2.
+Orders Comes From Code
+
+<h1>
+<p>
+<img>
+
+#3.
+Children Sit on Parents
+
+<div>
+
+<h1> Programmer.
+
+</div>
+
+Programmer content (which is the children) will be sitting on top of div box (parent). Like pizza meat on top of cheese, cheese on top of bread.
+
+
+4 ways to change the Positioning -
+
+Static
+Relative
+Absolute
+Fixed
+
+Static positioning---- All elements are static (by default) #1. #2. #3.
+
+Relative positioning---- 
+
+position: relative;
+left: 30px;
+
+img {top|left|right|bottom:20px;}
+
+**When you move the relative way, all the element surrounding are not effected. Like they move on the top.       
+
+
+---------------------------
+
+**Absolute poisitioning*** between the parent and children
+
+div {
+position: relative;
+
+}
+
+img {
+posiiton:absolute;
+right: 30 px;    <--------Right side of the Div (the parent).
+
+}
+
